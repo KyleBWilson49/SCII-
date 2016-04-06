@@ -6,14 +6,14 @@ const todo = (state, action) => {
       return {
         id: action.id,
         text: action.text,
-        comleted: false
+        completed: false
       }
     case 'TOGGLE_TODO':
       if (state.id !== action.id) {
         return state
       }
       return Object.assign({}, state, {
-        comleted: !state.comleted
+        completed: !state.completed
       })
     default:
       return state
